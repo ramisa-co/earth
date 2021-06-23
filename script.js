@@ -7,9 +7,9 @@
 // ===========================================================
 // Loading
 const textureLoader = new THREE.TextureLoader()
-const earthTexture = textureLoader.load('/textures/earthmap4k.jpg')
-const earthBump = textureLoader.load('/textures/earthbump4k.jpg')
-const cloudTexture = textureLoader.load('/textures/earthclouds4k.png')
+const earthTexture = textureLoader.load('./assets/earthmap4k.jpg')
+const earthBump = textureLoader.load('./assets/earthbump4k.jpg')
+const cloudTexture = textureLoader.load('./assets/earthclouds4k.png')
 const starTexture = textureLoader.load('./assets/fourpointstar.png')
 
 
