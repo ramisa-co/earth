@@ -7,9 +7,9 @@
 // ===========================================================
 // Loading
 const textureLoader = new THREE.TextureLoader()
-// const earthTexture = textureLoader.load('/textures/earthmap4k.jpg')
-// const earthBump = textureLoader.load('/textures/earthbump4k.jpg')
-// const cloudTexture = textureLoader.load('/textures/earthclouds4k.png')
+const earthTexture = textureLoader.load('/textures/earthmap4k.jpg')
+const earthBump = textureLoader.load('/textures/earthbump4k.jpg')
+const cloudTexture = textureLoader.load('/textures/earthclouds4k.png')
 const starTexture = textureLoader.load('./assets/fourpointstar.png')
 
 
@@ -46,10 +46,10 @@ starsGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 
 // Materials
 const earthMaterial = new THREE.MeshStandardMaterial({
     roughness: 0.2,
-    // map: earthTexture,
-    // bumpMap: earthBump,
-    // bumpScale: 1
-    color: 0xfff
+    map: earthTexture,
+    bumpMap: earthBump,
+    bumpScale: 1
+    // color: 0xfff
 })
 
 const cloudMaterial = new THREE.MeshPhongMaterial({
@@ -57,8 +57,8 @@ const cloudMaterial = new THREE.MeshPhongMaterial({
     shininess: 25, //light reflected off
     opacity: 0.8,
     transparent: true,
-    // map: cloudTexture,
-    color: 0xfffaaa
+    map: cloudTexture,
+    // color: 0xfffaaa
 });
 
 const starsMaterial = new THREE.PointsMaterial({
