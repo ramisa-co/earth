@@ -63,9 +63,9 @@ const cloudMaterial = new THREE.MeshPhongMaterial({
 
 const starsMaterial = new THREE.PointsMaterial({
     size: 0.015,
-    // map: starTexture,
+    map: starTexture,
     transparent: true,
-    color: 0xfff
+    // color: 0xfff
 })
 
 
